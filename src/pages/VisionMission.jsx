@@ -1,4 +1,4 @@
-```jsx
+jsx
 import React from "react";
 import {
   Target,
@@ -341,4 +341,4 @@ const VisionMission = () => {
 };
 
 export default VisionMission;
-```
+

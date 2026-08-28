@@ -1,4 +1,4 @@
-```jsx
+jsx
 import React from "react";
 import {
   Award,
@@ -343,4 +343,4 @@ const About = () => {
 };
 
 export default About;
-```
+
