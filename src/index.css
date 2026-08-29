@@ -13,7 +13,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: var(--light-bg);
   color: var(--text-dark);
 }
@@ -76,7 +77,6 @@ body {
   transition: all 0.2s;
   white-space: nowrap;
 }
-
 
 .nav-links a:hover {
   color: #ffffff;
@@ -312,31 +312,19 @@ body {
   color: #64748b;
   display: block;
   margin-top: 8px;
-=======
-/* =========================================
-   GLOBAL
-========================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
+
+/* =========================================
+   GLOBAL (news pages base)
+========================================= */
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #222;
-}
-
 button {
   font-family: inherit;
 }
-
 
 /* =========================================
    NEWS HERO / HEADER
@@ -402,7 +390,6 @@ button {
   opacity: 0.95;
 }
 
-
 /* =========================================
    SECTION
 ========================================= */
@@ -418,7 +405,6 @@ button {
   padding-top: 20px;
   padding-bottom: 90px;
 }
-
 
 /* =========================================
    SECTION HEADING
@@ -456,7 +442,6 @@ button {
   margin-top: 7px;
 }
 
-
 /* =========================================
    FEATURED NEWS GRID
 ========================================= */
@@ -466,7 +451,6 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-
 
 /* =========================================
    FEATURED CARD
@@ -487,7 +471,6 @@ button {
   transform: translateY(-8px);
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.14);
 }
-
 
 /* =========================================
    FEATURED IMAGE
@@ -512,7 +495,6 @@ button {
   transform: scale(1.03);
 }
 
-
 /* =========================================
    FEATURED CONTENT
 ========================================= */
@@ -534,7 +516,6 @@ button {
   line-height: 1.7;
 }
 
-
 /* =========================================
    CATEGORY
 ========================================= */
@@ -552,7 +533,6 @@ button {
   margin-bottom: 12px;
 }
 
-
 /* =========================================
    DATE
 ========================================= */
@@ -560,12 +540,11 @@ button {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #777;
+  color: #888888;
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
-
 
 /* =========================================
    LATEST NEWS GRID
@@ -576,7 +555,6 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-
 
 /* =========================================
    NEWS CARD
@@ -597,7 +575,6 @@ button {
   transform: translateY(-7px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
-
 
 /* =========================================
    LATEST NEWS IMAGE
@@ -621,7 +598,6 @@ button {
   transform: scale(1.02);
 }
 
-
 /* =========================================
    NEWS CONTENT
 ========================================= */
@@ -642,7 +618,6 @@ button {
   font-size: 14px;
   line-height: 1.7;
 }
-
 
 /* =========================================
    READ MORE BUTTON
@@ -670,7 +645,6 @@ button {
   transform: translateX(5px);
 }
 
-
 /* =========================================
    NEWS DETAIL
 ========================================= */
@@ -697,12 +671,6 @@ button {
   margin-bottom: 10px;
 }
 
-.detail-date {
-  color: #888888;
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-
 .detail-image {
   width: 100%;
   max-height: 600px;
@@ -718,7 +686,6 @@ button {
   font-size: 17px;
   line-height: 1.9;
 }
-
 
 /* =========================================
    ORANGE-GREEN DECORATION
@@ -738,13 +705,11 @@ button {
   border-radius: 5px;
 }
 
-
 /* =========================================
    TABLET
 ========================================= */
 
 @media (max-width: 900px) {
-
   .featured-grid,
   .news-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -765,13 +730,11 @@ button {
   }
 }
 
-
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
-
   .news-hero {
     padding: 60px 22px;
   }
@@ -837,6 +800,7 @@ button {
     line-height: 1.8;
   }
 }
+
 /* =========================================
    NEWS DETAIL PAGE
 ========================================= */
@@ -909,13 +873,11 @@ button {
   line-height: 1.9;
 }
 
-
 /* =========================================
    DETAIL PAGE MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
-
   .news-detail-page {
     padding: 25px 12px;
   }
@@ -940,5 +902,122 @@ button {
     font-size: 15px;
     line-height: 1.8;
   }
+}
 
+/* =========================================================
+   TEAMMATE'S NEW "NEWS PAGE" DESIGN
+   Renamed with a "v2" suffix because it reused .news-page,
+   .news-header, .news-container, .news-grid, .news-card,
+   .news-content, .news-category, .news-date, .news-image —
+   several of which already existed above with different
+   styling. Update the matching JSX/HTML class names to
+   match these v2 names, OR tell me which version (original
+   vs teammate's) should win and I'll remove the other.
+========================================================= */
+
+.news-page-v2 {
+  min-height: 100vh;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.news-header-v2 {
+  background: linear-gradient(90deg, #ff8c00, #138808);
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.news-header-v2 h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.news-header-v2 p {
+  margin: 10px 0 0;
+  font-size: 20px;
+}
+
+.news-container-v2 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 20px;
+}
+
+.news-container-v2 > h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.news-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.news-card-v2 {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.news-content-v2 {
+  padding: 25px;
+}
+
+.news-category-v2 {
+  display: inline-block;
+  background: #ff8c00;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.news-card-v2 h3 {
+  font-size: 22px;
+  margin: 18px 0 8px;
+}
+
+.news-date-v2 {
+  color: #138808;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.news-card-v2 p {
+  line-height: 1.6;
+}
+
+.news-card-v2 button {
+  background: #138808;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.news-card-v2 button:hover {
+  background: #0d6506;
+}
+
+.news-image-v2 {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .news-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+
+  .news-header-v2 h1 {
+    font-size: 30px;
+  }
 }
