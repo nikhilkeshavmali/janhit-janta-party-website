@@ -1,20 +1,28 @@
+import partyLogo from "../assets/images/logo.png";
 import { useState } from "react";
 import newsData from "../data/newsData";
-import "../index.css";
+import NewsCard from "../components/news/NewsCard";
+import FeaturedNews from "../components/news/FeaturedNews";
+import "../assets/News.css";
 
 function News() {
   const [selectedNews, setSelectedNews] = useState(null);
-
-  const featuredNews = [
-    newsData[2],
+  const mainFeaturedNews = newsData[0];
+  const sideFeaturedNews = [
     newsData[1],
-    newsData[0],
+    newsData[2],
   ];
 
   if (selectedNews) {
+
     return (
-      <div className="news-detail-page">
+      <main className="news-detail-page">
+
         <div className="news-detail-container">
+
+          {/* ===============================================
+              BACK BUTTON
+          ================================================ */}
 
           <button
             className="back-button"
@@ -23,153 +31,294 @@ function News() {
             ← Back to News
           </button>
 
+
+          {/* ===============================================
+              NEWS IMAGE
+          ================================================ */}
+
           <img
             src={selectedNews.image}
             alt={selectedNews.title}
             className="detail-image"
           />
 
+
+          {/* ===============================================
+              DETAIL CONTENT
+          ================================================ */}
+
           <div className="detail-content">
+
+            {/* Category */}
+
             <span className="news-category">
               {selectedNews.category}
             </span>
 
-            <h1>{selectedNews.title}</h1>
 
-            <div className="detail-date">
-              <span>📅</span>
-              <span>{selectedNews.date}</span>
-            
+            {/* Title */}
+
+            <h1>
+              {selectedNews.title}
+            </h1>
+
+
+            {/* =============================================
+                META INFORMATION
+            ============================================== */}
+
+            <div className="detail-meta">
+
+              {/* Date */}
+
+              <span>
+                📅 {selectedNews.date}
+              </span>
+
+
+              {/* Location */}
+
+              {selectedNews.location && (
+                <span>
+                  📍 {selectedNews.location}
+                </span>
+              )}
+
+
+              {/* Reading Time */}
+
+              {selectedNews.readTime && (
+                <span>
+                  ⏱ {selectedNews.readTime}
+                </span>
+              )}
+
             </div>
 
-            <p>{selectedNews.description}</p>
+
+            {/* =============================================
+                FULL NEWS CONTENT
+            ============================================== */}
+
+            <p>
+              {selectedNews.content ||
+                selectedNews.description}
+            </p>
+
+
+            {/* =============================================
+                SOURCE
+                Source available असल्यास दाखवतो.
+            ============================================== */}
+
+            {selectedNews.source && (
+              <div className="news-source">
+                Source: {selectedNews.source}
+              </div>
+            )}
+
           </div>
 
         </div>
-      </div>
+
+      </main>
     );
   }
 
-  return (
-    <div className="news-page">
 
-      {/* HEADER */}
+  // =======================================================
+  // MAIN NEWS PAGE
+  // =======================================================
+
+  return (
+
+    <main className="news-page">
+
+
+      {/* ===================================================
+          HERO SECTION
+      ==================================================== */}
+
       <section className="news-hero">
-        <div>
-          <span className="hero-label">JANHIT LOKSHAHI PARTY</span>
-          <h1>News & Updates</h1>
-          <p>
-            Information about the social, organizational and
-            political activities of Janhit Lokshahi Party.
-          </p>
-        </div>
+
+        <div className="news-hero-content">
+
+  {/* =====================================================
+      PARTY BRANDING
+  ====================================================== */}
+
+  <div className="news-brand">
+
+    {/* Actual Party Logo */}
+
+    <img
+      src={partyLogo}
+      alt="जनहित लोकशाही पार्टी"
+      className="news-logo"
+    />
+
+
+    {/* Party Name */}
+
+    <span className="hero-label">
+      JANHIT LOKSHAHI PARTY
+    </span>
+
+  </div>
+
+
+  {/* =====================================================
+      MAIN NEWS TITLE
+  ====================================================== */}
+
+  <h1>
+    NEWS <span>&</span> UPDATES
+  </h1>
+
+
+  {/* =====================================================
+      DESCRIPTION
+  ====================================================== */}
+
+  <p>
+    जनहित लोकशाही पार्टीच्या सामाजिक,
+    संघटनात्मक आणि राजकीय उपक्रमांची
+    अधिकृत माहिती.
+  </p>
+
+</div>
+
+
+        {/* =================================================
+            DECORATIVE SHAPES
+        ================================================== */}
+
+        <div className="hero-decoration hero-orange"></div>
+
+        <div className="hero-decoration hero-green"></div>
+
       </section>
 
-      {/* FEATURED NEWS */}
+
+
+      {/* ===================================================
+          FEATURED NEWS SECTION
+      ==================================================== */}
+
       <section className="featured-section">
 
+
+        {/* Section Heading */}
+
         <div className="section-heading">
-          <span>FEATURED</span>
-          <h2>Featured News</h2>
-        </div>
 
-        <div className="featured-grid">
+          <span>
+            FEATURED NEWS
+          </span>
 
-          {featuredNews.map((news) => (
-            <article className="featured-card" key={news.id}>
-
-              <div className="featured-image-wrapper">
-                <img
-                  src={news.image}
-                  alt={news.title}
-                />
-              </div>
-
-              <div className="featured-content">
-
-                <span className="news-category">
-                  {news.category}
-                </span>
-
-                <h3>{news.title}</h3>
-
-                <div className="news-date">
-                    <span>📅</span>
-                    <span>{news.date}</span>
-                </div>
-
-                <p className="short-description">
-                  {news.description}
-                </p>
-
-                <button
-                  onClick={() => setSelectedNews(news)}
-                >
-                  READ MORE →
-                </button>
-
-              </div>
-
-            </article>
-          ))}
+          <h2>
+            प्रमुख बातम्या
+          </h2>
 
         </div>
+
+
+        {/* =================================================
+            MAGAZINE LAYOUT
+        ================================================== */}
+
+        <div className="featured-magazine">
+
+
+          {/* ===============================================
+              MAIN FEATURED NEWS
+          ================================================ */}
+
+          <div className="featured-main">
+
+            <FeaturedNews
+              news={mainFeaturedNews}
+              onReadMore={setSelectedNews}
+              variant="large"
+            />
+
+          </div>
+
+
+          {/* ===============================================
+              SIDE FEATURED NEWS
+          ================================================ */}
+
+          <div className="featured-side">
+
+            {sideFeaturedNews.map((news) => (
+
+              <FeaturedNews
+                key={news.id}
+                news={news}
+                onReadMore={setSelectedNews}
+                variant="compact"
+              />
+
+            ))}
+
+          </div>
+
+        </div>
+
       </section>
 
-      {/* LATEST NEWS */}
+
+
+      {/* ===================================================
+          LATEST NEWS SECTION
+      ==================================================== */}
+
       <section className="latest-section">
 
+
+        {/* Section Heading */}
+
         <div className="section-heading">
-          <span>LATEST UPDATES</span>
-          <h2>News & Updates</h2>
+
+          <span>
+            LATEST NEWS & UPDATES
+          </span>
+
+          <h2>
+            नवीनतम बातम्या आणि अपडेट्स
+          </h2>
+
         </div>
+
+
+        {/* =================================================
+            NEWS GRID
+        ================================================== */}
 
         <div className="news-grid">
 
-          {newsData.map((news) => (
-            <article className="news-card" key={news.id}>
+          {newsData.slice(3).map((news) => (
 
-              <div className="news-image-wrapper">
-                <img
-                  src={news.image}
-                  alt={news.title}
-                />
-              </div>
+            <NewsCard
+              key={news.id}
+              news={news}
+              onReadMore={setSelectedNews}
+            />
 
-              <div className="news-content">
-
-                <span className="news-category">
-                  {news.category}
-                </span>
-
-                <h3>{news.title}</h3>
-
-                <div className="news-date">
-                  <span>📅</span>
-                  <span>{news.date}</span>
-                </div>
-
-                <p className="short-description">
-                  {news.description}
-                </p>
-
-                <button
-                  onClick={() => setSelectedNews(news)}
-                >
-                  READ MORE →
-                </button>
-
-              </div>
-
-            </article>
           ))}
 
         </div>
 
       </section>
 
-    </div>
+    </main>
   );
 }
+
+
+// =========================================================
+// EXPORT
+// =========================================================
 
 export default News;

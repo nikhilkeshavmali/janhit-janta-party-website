@@ -1,114 +1,514 @@
-import photo01 from "../assets/images/photo01.jpg";
-import photo02 from "../assets/images/photo02.png";
-import photo03 from "../assets/images/photo03.jpg";
-import photo04 from "../assets/images/photo04.png";
-import photo05 from "../assets/images/photo05.png";
-import photo06 from "../assets/images/photo06.png";
-import photo07 from "../assets/images/photo07.jpg";
-import photo08 from "../assets/images/photo08.png";
-import photo09 from "../assets/images/photo09.png";
-import photo10 from "../assets/images/photo10.png";
+// =========================================================
+// NEWS DATA
+// Janhit Lokshahi Party
+//
+// NOTE:
+// Featured stories आणि archived/history stories
+// या file मध्ये व्यवस्थित वेगळ्या स्वरूपात ठेवलेल्या आहेत.
+//
+// IMPORTANT:
+// image field मधील फोटो illustrative/demo images आहेत.
+// ते actual party-event photographs म्हणून दाखवू नयेत.
+// Final website साठी verified party photos वापरता येतील.
+// =========================================================
+
 
 const newsData = [
+
+  // =======================================================
+  // FEATURED NEWS - 01
+  // =======================================================
+
   {
     id: 1,
-    title: "Party's Preparation for Assembly Elections",
+
+    type: "featured",
+
+    archived: false,
+
     category: "Election Update",
-    date: "2019",
-    image: photo01,
+
+    title: "विधानसभा निवडणुकीसाठी पक्षाची तयारी",
+
+    date: "28 August 2026",
+
+    location: "Maharashtra",
+
+    // Illustrative political image
+    image:
+      "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=85",
+
+    // Card वरची short information
     description:
-      "Janhit Lokshahi Party organized a press conference in connection with the Assembly elections. Information regarding the party's election preparations was presented, along with its organizational expansion across various Assembly constituencies."
+      "आगामी विधानसभा निवडणुकीच्या पार्श्वभूमीवर पक्षाच्या संघटनात्मक तयारीचा आणि विविध मतदारसंघांतील नियोजनाचा आढावा घेण्यात आला.",
+
+    // Read More केल्यानंतरची detailed information
+    content:
+      "आगामी विधानसभा निवडणुकीच्या पार्श्वभूमीवर पक्षाच्या संघटनात्मक तयारीचा आढावा घेण्यात आला. स्थानिक पातळीवरील कार्यकर्त्यांशी संवाद, संघटनात्मक बांधणी, जनसंपर्क आणि मतदारसंघनिहाय नियोजन या विषयांवर चर्चा करण्यात आली. पक्षाच्या कार्यकर्त्यांनी विविध स्तरांवर संपर्क वाढवून संघटन अधिक मजबूत करण्याच्या दिशेने काम करण्याचा निर्धार व्यक्त केला.",
+
+    source: "Party News & Updates",
+
+    readTime: "3 min read",
   },
+
+
+  // =======================================================
+  // FEATURED NEWS - 02
+  // =======================================================
 
   {
     id: 2,
-    title: "Speeding Up the Appointment of Party Office Bearers",
+
+    type: "featured",
+
+    archived: false,
+
     category: "Organization Update",
-    date: "2019",
-    image: photo02,
+
+    title: "पक्षाच्या संघटनात्मक विस्ताराला वेग",
+
+    date: "24 August 2026",
+
+    location: "Maharashtra",
+
+    image:
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=85",
+
     description:
-      "As part of the organizational expansion of Janhit Lokshahi Party, workers were appointed to various positions. Senior party office bearers congratulated the newly appointed members and wished them success in their responsibilities."
+      "विविध भागांमध्ये पक्षाची संघटनात्मक बांधणी मजबूत करण्यासाठी पदाधिकारी आणि कार्यकर्त्यांच्या बैठका घेण्यात आल्या.",
+
+    content:
+      "विविध भागांमध्ये पक्षाची संघटनात्मक बांधणी मजबूत करण्यासाठी पदाधिकारी आणि कार्यकर्त्यांच्या बैठका घेण्यात आल्या. स्थानिक पातळीवर संघटन मजबूत करणे, नव्या कार्यकर्त्यांना जोडणे, कार्यकर्त्यांशी सातत्याने संवाद साधणे आणि आगामी उपक्रमांचे नियोजन यावर बैठकीमध्ये भर देण्यात आला.",
+
+    source: "Party News & Updates",
+
+    readTime: "2 min read",
   },
+
+
+  // =======================================================
+  // FEATURED NEWS - 03
+  // =======================================================
 
   {
     id: 3,
-    title: "Janhit Lokshahi Party Raises Its Voice on Social Issues",
+
+    type: "featured",
+
+    archived: false,
+
     category: "Social Movement",
-    date: "2019",
-    image: photo03,
+
+    title: "जनहिताच्या प्रश्नांवर पक्षाचा आवाज",
+
+    date: "21 August 2026",
+
+    location: "Maharashtra",
+
+    image:
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
+
     description:
-      "Janhit Lokshahi Party conducted protests and public awareness programmes on various social issues and public demands. Party workers and citizens participated in these programmes at different locations."
+      "सामाजिक प्रश्नांबाबत जनजागृती करण्यासाठी पक्षाच्या कार्यकर्त्यांनी विविध संवाद आणि जनजागृती उपक्रमांवर भर दिला.",
+
+    content:
+      "जनहिताशी संबंधित विविध सामाजिक प्रश्नांवर नागरिकांशी संवाद साधण्यासाठी जनजागृती आणि सामाजिक उपक्रम राबवण्यावर भर देण्यात आला. नागरिकांच्या समस्या जाणून घेणे, त्याबाबत चर्चा करणे आणि संबंधित विषयांवर जनजागृती वाढवणे या उद्देशाने विविध उपक्रमांचे नियोजन करण्यात आले.",
+
+    source: "Party News & Updates",
+
+    readTime: "3 min read",
   },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 04
+  // नाशिक जिल्हा महिला मेळावा
+  // =======================================================
 
   {
     id: 4,
-    title: "Organizational Activities Through the Party Contact Office",
-    category: "Party Organization",
-    date: "2019",
-    image: photo04,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Women Wing",
+
+    title: "नाशिक जिल्हा महिला मेळावा",
+
+    date: "9 May 2018",
+
+    location: "Nashik District",
+
+    image:
+      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=85",
+
     description:
-      "Meetings of party office bearers and workers were conducted at the Janhit Lokshahi Party contact office. Various organizational matters along with social and local issues were discussed."
+      "9 मे 2018 रोजी जनहित लोकशाही पार्टीच्या वतीने नाशिक जिल्हा महिला मेळाव्याचे आयोजन करण्यात आले.",
+
+    content:
+      "दिनांक 9 मे 2018 रोजी जनहित लोकशाही पार्टीच्या वतीने नाशिक जिल्हा महिला मेळावा आयोजित करण्यात आला. या कार्यक्रमाला मा. अशोकराव आल्हाट तसेच पक्षाचे पदाधिकारी उपस्थित होते. महिला कार्यकर्त्यांचा सहभाग आणि पक्षाच्या संघटनात्मक कार्याचा आढावा या कार्यक्रमाच्या माध्यमातून दिसून येतो.",
+
+    source: "Party PDF - Page 12",
+
+    readTime: "2 min read",
   },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 05
+  // मराठवाडा विभागीय पातळीवरील बैठक
+  // =======================================================
 
   {
     id: 5,
-    title: "Enthusiastic Participation in Women's Gathering",
-    category: "Women's Wing",
-    date: "2021",
-    image: photo05,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Organization Update",
+
+    title: "मराठवाडा विभागीय पातळीवरील बैठक",
+
+    date: "22 June 2022",
+
+    location: "Ambad, Jalna",
+
+    image:
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=85",
+
     description:
-      "A women's gathering was organized with the participation of women workers. The programme focused on the party's social and organizational role and was attended by party office bearers and workers."
+      "जालना जिल्ह्यातील अंबड तालुक्यात मराठवाडा विभागीय पातळीवरील बैठक आयोजित करण्यात आली.",
+
+    content:
+      "बुधवार दिनांक 22/06/2022 रोजी जालना जिल्ह्यातील अंबड तालुक्यात मराठवाडा विभागीय पातळीवरील बैठक आयोजित करण्यात आली. या बैठकीमध्ये पक्षाचे पदाधिकारी आणि कार्यकर्ते उपस्थित होते. विभागीय पातळीवरील पक्षाच्या कार्याबाबत चर्चा करण्यात आली.",
+
+    source: "Party PDF - Page 12",
+
+    readTime: "2 min read",
   },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 06
+  // औरंगाबाद कार्यकर्ता मेळावा
+  // =======================================================
 
   {
     id: 6,
-    title: "Social Awareness Through Bharatiya Kranti Sena",
-    category: "Social Work",
-    date: "2006",
-    image: photo06,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Organization Update",
+
+    title: "औरंगाबाद येथील कार्यकर्ता मेळावा",
+
+    date: "2017",
+
+    location: "Aurangabad",
+
+    image:
+      "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=85",
+
     description:
-      "According to the party document, various social awareness programmes, protests and public contact activities were conducted through Bharatiya Kranti Sena to raise awareness about social issues."
+      "सन 2017 मध्ये औरंगाबाद येथे पक्षाच्या कार्यकर्ता मेळाव्याचे आयोजन करण्यात आले.",
+
+    content:
+      "सन 2017 मध्ये औरंगाबाद येथे कार्यकर्त्यांच्या मेळाव्याचे आयोजन करण्यात आले. या कार्यक्रमामध्ये अनेक पदाधिकारी आणि कार्यकर्ते उपस्थित होते. कार्यकर्त्यांचा सहभाग वाढविणे आणि संघटनात्मक बांधणी मजबूत करण्याच्या दृष्टीने हा उपक्रम महत्त्वाचा असल्याचे उपलब्ध PDF मधील caption मधून दिसते.",
+
+    source: "Party PDF - Page 12",
+
+    readTime: "2 min read",
   },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 07
+  // पुणे राज्यव्यापी अभियान
+  // =======================================================
 
   {
     id: 7,
-    title: "Navi Mumbai Public Awareness Campaign",
-    category: "Awareness Campaign",
-    date: "15 August 2006",
-    image: photo07,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Public Campaign",
+
+    title: "राज्यव्यापी अभियानाची पुण्यातून सुरुवात",
+
+    date: "7 July 2019",
+
+    location: "Pune",
+
+    image:
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=85",
+
     description:
-      "The Navi Mumbai Public Awareness Campaign aimed to create awareness among citizens about various social issues. The campaign is mentioned as an important part of the social work journey documented by the party."
+      "दि. 7 जुलै 2019 रोजी जनहित लोकशाही पार्टीच्या वतीने आयोजित राज्यव्यापी अभियानाची पुणे येथून सुरुवात करण्यात आली.",
+
+    content:
+      "दि. 7 जुलै 2019 रोजी जनहित लोकशाही पार्टीच्या वतीने आयोजित राज्यव्यापी अभियानाची पुणे येथून सुरुवात करण्यात आली. या अभियानाच्या माध्यमातून पक्षाचा जनसंपर्क आणि संघटनात्मक कार्य राज्यभर पोहोचविण्याचा प्रयत्न करण्यात आला.",
+
+    source: "Party PDF - Page 14",
+
+    readTime: "2 min read",
   },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 08
+  // मातंग समाज प्रबोधन अभियान
+  // =======================================================
 
   {
     id: 8,
-    title: "Organizational Meetings and Felicitation of Party Workers",
-    category: "Party Activities",
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Social Awareness",
+
+    title: "मातंग समाज प्रबोधन अभियान",
+
     date: "2019",
-    image: photo08,
+
+    location: "Maharashtra",
+
+    image:
+      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1200&q=85",
+
     description:
-      "Various meetings and felicitation programmes were organized for party office bearers and workers. The party focused on strengthening its organization through communication and coordination with workers."
+      "उपलब्ध PDF मध्ये “मातंग समाज प्रबोधन अभियान” या नावाने अभियानाची नोंद करण्यात आली आहे.",
+
+    content:
+      "उपलब्ध PDF मध्ये “मातंग समाज प्रबोधन अभियान” या नावाने अभियानाची नोंद आहे. सामाजिक जागृती, समाजातील प्रश्न आणि संघटनात्मक सहभाग याबाबत जनजागृती करण्यासाठी अभियान राबविण्यात आल्याचे उपलब्ध साहित्यामधून दिसते.",
+
+    source: "Party PDF - Page 14",
+
+    readTime: "2 min read",
   },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 09
+  // नवी मुंबई जनजागरण अभियान
+  // =======================================================
 
   {
     id: 9,
-    title: "Journey from Social Movement to Political Organization",
-    category: "Party History",
-    date: "2015–16",
-    image: photo09,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Public Awareness",
+
+    title: "नवी मुंबई जनजागरण अभियान",
+
+    date: "15 August 2006 - 19 August 2006",
+
+    location: "Navi Mumbai",
+
+    image:
+      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85",
+
     description:
-      "The political journey began through social movements and later led to the formation and organizational expansion of Janhit Lokshahi Party. The party document describes the social and political journey of its founder."
+      "दि. 15 ऑगस्ट 2006 ते 19 ऑगस्ट 2006 या कालावधीत नवी मुंबई जनजागरण अभियानाची नोंद उपलब्ध PDF मध्ये आहे.",
+
+    content:
+      "उपलब्ध PDF मध्ये “नवी मुंबई जनजागरण अभियान” या शीर्षकाखाली दि. 15 ऑगस्ट 2006 ते 19 ऑगस्ट 2006 या कालावधीची नोंद आहे. या अभियानामध्ये नागरिकांमध्ये जनजागृती निर्माण करण्याच्या उद्देशाने विविध उपक्रम राबविण्यात आल्याची माहिती उपलब्ध साहित्यामध्ये दिली आहे.",
+
+    source: "Party PDF - Page 14",
+
+    readTime: "2 min read",
   },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 10
+  // नियुक्ती सोहळा
+  // =======================================================
 
   {
     id: 10,
-    title: "Wide Participation of Janhit Lokshahi Party Workers",
-    category: "Party Activities",
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Organization Update",
+
+    title: "जनहित लोकशाही पार्टीचा नियुक्ती सोहळा",
+
     date: "2019",
-    image: photo10,
+
+    location: "Navi Mumbai",
+
+    image:
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
+
     description:
-      "Party office bearers and workers participated widely in various programmes, meetings, social activities and organizational events, contributing to the development of the party's organizational activities."
-  }
+      "2019 मध्ये नवी मुंबई येथे जनहित लोकशाही पार्टीचा नियुक्ती सोहळा आयोजित करण्यात आला.",
+
+    content:
+      "2019 मध्ये नवी मुंबई येथे जनहित लोकशाही पार्टीचा नियुक्ती सोहळा आयोजित करण्यात आला. या कार्यक्रमात नवनियुक्त पदाधिकाऱ्यांचा सत्कार करण्यात आला. मा. आल्हाट यांच्यासमवेत मा. मोरे साहेब, मा. चौधरी साहेब, मा. चंदन साहेब इत्यादी मान्यवर व पदाधिकारी उपस्थित होते.",
+
+    source: "Party PDF - Page 15",
+
+    readTime: "2 min read",
+  },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 11
+  // लोकशाही आघाडी पत्रकार परिषद
+  // =======================================================
+
+  {
+    id: 11,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Press Conference",
+
+    title: "लोकशाही आघाडीची भव्य पत्रकार परिषद",
+
+    date: "8 June 2022, 4:00 PM",
+
+    location: "Mumbai Marathi Patrakar Sangh, Mumbai",
+
+    image:
+      "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1200&q=85",
+
+    description:
+      "8 जून 2022 रोजी मुंबई मराठी पत्रकार संघ येथे जनहित लोकशाही पार्टी व इतर 20 पक्षांची भव्य पत्रकार परिषद पार पडली.",
+
+    content:
+      "दि. 8 जून 2022 रोजी दुपारी 4.00 वाजता मुंबई मराठी पत्रकार संघ येथे जनहित लोकशाही पार्टी व इतर 20 पक्षांची भव्य पत्रकार परिषद पार पडली. उपलब्ध निवेदनानुसार आगामी स्थानिक स्वराज्य संस्था, लोकसभा आणि विधानसभा निवडणुकांमध्ये एक नवा राजकीय पर्याय उपलब्ध करून देण्याचा प्रयत्न असल्याचे नमूद करण्यात आले. “लोकशाही आघाडी” या नावाने पर्यायी राजकीय व्यासपीठ उभे करण्याची भूमिका मांडण्यात आली. उपलब्ध PDF मध्ये OBC, आदिवासी, मागासवर्गीय, अल्पसंख्याक तसेच इतर वंचित घटकांच्या सहभागाचा उल्लेख आहे.",
+
+    source: "Party PDF - Page 22",
+
+    readTime: "4 min read",
+  },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 12
+  // ठाणे चर्चासत्र
+  // =======================================================
+
+  {
+    id: 12,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Political Discussion",
+
+    title: "ठाणे जिल्ह्यात राजकीय विषयक चर्चासत्र",
+
+    date: "December 2022",
+
+    location: "Thane District",
+
+    image:
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
+
+    description:
+      "डिसेंबर 2022 मध्ये ठाणे जिल्ह्यात राजकीय विषयक चर्चासत्र पार पडल्याची नोंद उपलब्ध PDF मध्ये आहे.",
+
+    content:
+      "डिसेंबर 2022 मध्ये ठाणे जिल्ह्यात राजकीय विषयक चर्चासत्र पार पडल्याची नोंद उपलब्ध PDF मध्ये आहे. या चर्चासत्रामध्ये विविध पदाधिकारी आणि कार्यकर्ते सहभागी झाले. राजकीय परिस्थिती आणि पुढील कार्याबाबत विचारविनिमय करण्यात आल्याचे उपलब्ध छायाचित्राच्या caption मधून दिसते.",
+
+    source: "Party PDF - Page 24",
+
+    readTime: "2 min read",
+  },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 13
+  // OBC जनजागृती आंदोलन
+  // =======================================================
+
+  {
+    id: 13,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Social Awareness",
+
+    title: "OBC जनजागृती आंदोलन",
+
+    date: "2022",
+
+    location: "Maharashtra",
+
+    image:
+      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=85",
+
+    description:
+      "सन 2022 मधील उपलब्ध PDF नोंदींमध्ये OBC जनजागृती आंदोलनाचा उल्लेख आहे.",
+
+    content:
+      "सन 2022 मधील उपलब्ध PDF नोंदींमध्ये OBC जनजागृती आंदोलनाचा उल्लेख आहे. OBC समाजाशी संबंधित प्रश्नांवर जनजागृती करण्यासाठी या उपक्रमात सहभाग घेण्यात आला. कार्यक्रमामध्ये पक्षाचे पदाधिकारी आणि कार्यकर्ते उपस्थित असल्याचे उपलब्ध छायाचित्रातून दिसते.",
+
+    source: "Party PDF - Page 24",
+
+    readTime: "2 min read",
+  },
+
+
+  // =======================================================
+  // ARCHIVED NEWS - 14
+  // विविध सामाजिक व राजकीय उपक्रम
+  // =======================================================
+
+  {
+    id: 14,
+
+    type: "archive",
+
+    archived: true,
+
+    category: "Party Activities",
+
+    title: "विविध सामाजिक व राजकीय उपक्रमांची नोंद",
+
+    date: "2022",
+
+    location: "Maharashtra",
+
+    image:
+      "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=85",
+
+    description:
+      "पक्षाच्या विविध सामाजिक आणि राजकीय उपक्रमांची छायाचित्रांसह नोंद उपलब्ध साहित्यामध्ये करण्यात आली आहे.",
+
+    content:
+      "उपलब्ध PDF च्या News & Updates विभागामध्ये जनहित लोकशाही पार्टीच्या विविध सामाजिक आणि राजकीय उपक्रमांची छायाचित्रांसह नोंद करण्यात आली आहे. यामध्ये पदाधिकारी नियुक्ती, समाजातील विविध घटकांशी संवाद, जनजागृती आणि विविध सार्वजनिक कार्यक्रमांमधील पक्षाचा सहभाग यांचा समावेश आहे.",
+
+    source: "Party PDF - Page 24",
+
+    readTime: "3 min read",
+  },
+
 ];
+
+
+// =========================================================
+// EXPORT
+// =========================================================
 
 export default newsData;
