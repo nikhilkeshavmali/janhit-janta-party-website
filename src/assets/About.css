@@ -1,0 +1,624 @@
+/* About.css - Pure Custom CSS */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.about-section {
+  width: 100vw;               /* Screen chi purn width frame karil */
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2.5rem 1rem;
+  box-sizing: border-box;
+  margin-left: calc(-50vw + 50%); /* Host wrapper chi max-width break karnyansathi */
+  margin-right: calc(-50vw + 50%);
+}
+
+@media (min-width: 640px) { .about-section { padding: 3.5rem 1.5rem; } }
+@media (min-width: 1024px) { .about-section { padding: 4rem 2.5rem; } }
+
+/* Laptop ani mothya screen sathi container purn spread hoil */
+.about-container {
+  width: 100%;
+  max-width: 100% !important;  /* Maximum limits kadhun takle */
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .about-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .about-container {
+    max-width: 1650px; /* Ultra-wide screen sathi limit */
+  }
+}
+
+/* Header Styles */
+.about-header {
+  text-align: center;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) { .about-header { margin-bottom: 4rem; } }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: #ffedd5;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c2410c;
+}
+
+@media (min-width: 640px) { .badge { font-size: 0.875rem; } }
+
+.main-title {
+  margin-top: 1.25rem;
+  font-size: 1.875rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  background: linear-gradient(to right, #f97316, #ea580c, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 640px) { .main-title { font-size: 2.25rem; } }
+@media (min-width: 768px) { .main-title { font-size: 3rem; } }
+@media (min-width: 1024px) { .main-title { font-size: 3.75rem; } }
+
+.header-desc {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.75;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) { .header-desc { font-size: 1rem; line-height: 2rem; } }
+@media (min-width: 768px) { .header-desc { font-size: 1.125rem; } }
+@media (min-width: 1024px) { .header-desc { font-size: 1.25rem; } }
+
+.header-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.divider-side {
+  height: 0.25rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  background-color: #fed7aa;
+}
+@media (min-width: 640px) { .divider-side { width: 4rem; } }
+
+.divider-center {
+  height: 0.375rem;
+  width: 4rem;
+  border-radius: 9999px;
+  background-color: #ea580c;
+}
+@media (min-width: 640px) { .divider-center { width: 6rem; } }
+
+/* Profile Card */
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+@media (min-width: 640px) { .profile-card { border-radius: 1.5rem; } }
+@media (min-width: 1024px) { .profile-card { margin-bottom: 5rem; } }
+
+/* Profile Grid - Laptop sathi 4:8 ratio fix kela ahe jyamule purn screen bharun disel */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+@media (min-width: 1024px) { 
+  .profile-grid { 
+    grid-template-columns: 35% 65%; 
+  } 
+}
+
+.profile-left {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #f97316, #ea580c, #d97706);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+@media (min-width: 640px) { .profile-left { padding: 2.5rem; } }
+@media (min-width: 1024px) { .profile-left { padding: 3.5rem 3rem; } }
+
+.decor-circle-1 {
+  position: absolute;
+  top: -4rem;
+  left: -4rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.decor-circle-2 {
+  position: absolute;
+  bottom: -5rem;
+  right: -5rem;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.img-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  filter: blur(20px);
+  transform: scale(1.05);
+}
+@media (min-width: 640px) { .img-glow { border-radius: 1.5rem; } }
+
+.profile-img {
+  position: relative;
+  width: 13rem;
+  height: 16rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: top;
+  border: 4px solid #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 640px) { .profile-img { width: 15rem; height: 18rem; border-radius: 1.5rem; } }
+@media (min-width: 768px) { .profile-img { width: 16rem; height: 20rem; } }
+@media (min-width: 1024px) { .profile-img { width: 17rem; height: 22rem; } }
+
+.president-badge {
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 640px) { .president-badge { font-size: 0.75rem; padding: 0.5rem 1rem; } }
+
+.president-name {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+}
+@media (min-width: 640px) { .president-name { font-size: 1.5rem; } }
+@media (min-width: 768px) { .president-name { font-size: 1.875rem; } }
+
+.president-title {
+  color: #ffedd5;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+@media (min-width: 640px) { .president-title { font-size: 1rem; } }
+
+.president-party {
+  color: #ffedd5;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+@media (min-width: 640px) { .president-party { font-size: 1rem; } }
+
+.info-box {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+  width: 100%;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) { .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #fff7ed;
+}
+
+.info-item-full {
+  grid-column: span 2 / span 2;
+}
+
+.info-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #ffffff;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.info-label {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.info-value {
+  margin-top: 0.125rem;
+  font-weight: 500;
+}
+
+/* Profile Right / Biography */
+.profile-right {
+  padding: 2rem;
+}
+@media (min-width: 640px) { .profile-right { padding: 2.5rem; } }
+@media (min-width: 1024px) { .profile-right { padding: 3.5rem 4rem; } }
+
+.bio-label-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ea580c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.bio-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background-color: #ffedd5;
+  flex-shrink: 0;
+}
+
+.bio-heading {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 640px) { .bio-heading { font-size: 1.875rem; } }
+@media (min-width: 768px) { .bio-heading { font-size: 2.25rem; } }
+
+.bio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.75;
+}
+@media (min-width: 640px) { .bio-text { font-size: 1rem; } }
+
+/* Timeline Journey */
+.timeline-section {
+  margin-top: 2rem;
+}
+@media (min-width: 640px) { .timeline-section { margin-top: 2.5rem; } }
+
+.timeline-heading {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 640px) { .timeline-heading { font-size: 1.25rem; } }
+
+.timeline-container {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 15px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background-color: #fed7aa;
+}
+@media (min-width: 640px) { .timeline-line { left: 18px; } }
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+@media (min-width: 640px) { .timeline-item { gap: 1.25rem; } }
+
+.timeline-icon-wrap {
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #ffedd5;
+  border: 4px solid #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 640px) { .timeline-icon-wrap { width: 2.25rem; height: 2.25rem; } }
+
+.timeline-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-year {
+  display: inline-flex;
+  border-radius: 0.375rem;
+  background-color: #ffedd5;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #c2410c;
+}
+
+.timeline-title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+@media (min-width: 640px) { .timeline-title { font-size: 1rem; } }
+
+.timeline-desc {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Quote Box */
+.quote-box {
+  position: relative;
+  margin-top: 2rem;
+  background-color: #fff7ed;
+  border: 1px solid #ffedd5;
+  border-left: 4px solid #f97316;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+@media (min-width: 640px) { .quote-box { padding: 1.5rem; } }
+
+.quote-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  background-color: #ea580c;
+  color: #ffffff;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+  font-style: italic;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.75;
+  font-size: 0.875rem;
+}
+@media (min-width: 640px) { .quote-text { font-size: 1rem; } }
+
+/* Principles Section */
+.principles-header {
+  text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 640px) { .principles-header { margin-bottom: 3rem; } }
+
+.principles-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-top: 1rem;
+  line-height: 1.25;
+}
+@media (min-width: 640px) { .principles-title { font-size: 1.875rem; } }
+@media (min-width: 768px) { .principles-title { font-size: 2.25rem; } }
+@media (min-width: 1024px) { .principles-title { font-size: 3rem; } }
+
+.principles-desc {
+  font-size: 0.875rem;
+  color: #475569;
+  margin-top: 1rem;
+  line-height: 1.75;
+}
+@media (min-width: 640px) { .principles-desc { font-size: 1rem; } }
+@media (min-width: 1024px) { .principles-desc { font-size: 1.125rem; } }
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) { .principles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .principles-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; } }
+
+.principle-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+@media (min-width: 640px) { .principle-card { padding: 1.75rem; } }
+@media (min-width: 1024px) { .principle-card { padding: 2rem; } }
+
+.principle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.principle-icon-box {
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffedd5;
+  color: #ea580c;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+@media (min-width: 640px) { .principle-icon-box { width: 3.5rem; height: 3.5rem; margin-bottom: 1.5rem; } }
+
+.principle-card:hover .principle-icon-box {
+  background-color: #ea580c;
+  color: #ffffff;
+}
+
+.principle-card-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 640px) { .principle-card-title { font-size: 1.25rem; } }
+
+.principle-card-desc {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.75;
+}
+@media (min-width: 640px) { .principle-card-desc { font-size: 1rem; } }
+
+/* Motto Section */
+.motto-banner {
+  position: relative;
+  overflow: hidden;
+  margin-top: 3.5rem;
+  background: linear-gradient(to bottom right, #f97316, #ea580c, #d97706);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 640px) { .motto-banner { border-radius: 1.5rem; padding: 2.5rem; } }
+@media (min-width: 768px) { .motto-banner { padding: 3rem; } }
+@media (min-width: 1024px) { .motto-banner { margin-top: 5rem; padding: 4rem; } }
+
+.motto-subtitle {
+  color: #ffedd5;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 640px) { .motto-subtitle { font-size: 0.875rem; } }
+
+.motto-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+@media (min-width: 640px) { .motto-title { font-size: 1.875rem; } }
+@media (min-width: 768px) { .motto-title { font-size: 2.25rem; } }
+@media (min-width: 1024px) { .motto-title { font-size: 3rem; } }
+
+.motto-divider-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+@media (min-width: 640px) { .motto-divider-wrap { margin: 1.5rem 0; } }
+
+.motto-divider {
+  height: 0.25rem;
+  width: 4rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+}
+@media (min-width: 640px) { .motto-divider { width: 6rem; } }
+
+.motto-footer-text {
+  font-size: 0.875rem;
+  color: #fff7ed;
+  font-weight: 500;
+  line-height: 1.75;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 640px) { .motto-footer-text { font-size: 1rem; } }
+@media (min-width: 1024px) { .motto-footer-text { font-size: 1.125rem; } }
