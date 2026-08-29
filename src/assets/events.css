@@ -1,0 +1,397 @@
+/* ============================================================
+   EVENTS PAGE
+   ============================================================ */
+
+.events-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f8ff;
+  color: #172033;
+}
+
+
+/* ============================================================
+   PAGE HEADING
+   ============================================================ */
+
+.events-heading {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.events-heading h1 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* Orange + green line below Events */
+
+.heading-decoration {
+  position: relative;
+
+  width: 45px;
+  height: 4px;
+
+  margin: 7px auto 9px;
+}
+
+.orange-line {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 28px;
+  height: 3px;
+
+  background: #ff951f;
+
+  border-radius: 10px;
+}
+
+.green-line {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 14px;
+  height: 3px;
+
+  background: #62a64b;
+
+  border-radius: 10px;
+}
+
+
+.events-heading p {
+  margin: 0;
+
+  font-size: 9px;
+
+  color: #707070;
+}
+
+
+/* ============================================================
+   COMMON SECTION CONTAINER
+   ============================================================ */
+
+.events-container {
+  width: 610px;
+
+  margin: 0 auto;
+
+  padding-bottom: 30px;
+}
+
+
+/* ============================================================
+   SECTION TITLE
+   ============================================================ */
+
+.section-title {
+  margin-bottom: 17px;
+}
+
+.section-title h2 {
+  margin: 0 0 4px;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.section-title p {
+  margin: 0;
+
+  font-size: 8px;
+
+  color: #747474;
+}
+
+
+/* ============================================================
+   UPCOMING EVENTS GRID
+   ============================================================ */
+
+.upcoming-events-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 11px;
+}
+
+
+/* ============================================================
+   UPCOMING EVENT CARD
+   ============================================================ */
+
+.upcoming-event-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e6e6e6;
+
+  border-radius: 5px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+
+  transition: 0.2s ease;
+}
+
+.upcoming-event-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ============================================================
+   UPCOMING EVENT IMAGE
+   ============================================================ */
+
+.upcoming-image-container {
+  position: relative;
+
+  width: 100%;
+  height: 80px;
+
+  overflow: hidden;
+}
+
+.upcoming-image-container img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* Green UPCOMING badge */
+
+.upcoming-badge {
+  position: absolute;
+
+  top: 7px;
+  right: 6px;
+
+  padding: 3px 5px;
+
+  background: #198b45;
+
+  color: white;
+
+  font-size: 6px;
+
+  font-weight: 700;
+
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+   UPCOMING EVENT CONTENT
+   ============================================================ */
+
+.upcoming-event-content {
+  padding: 10px;
+}
+
+.upcoming-event-content h3 {
+  margin: 0 0 11px;
+
+  min-height: 30px;
+
+  font-size: 12px;
+
+  line-height: 1.25;
+
+  color: #202533;
+}
+
+
+/* Join Event button */
+
+.join-event-button {
+  width: 100%;
+
+  padding: 7px;
+
+  border: none;
+
+  border-radius: 3px;
+
+  background: #ff9725;
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.join-event-button:hover {
+  background: #e98613;
+}
+
+
+/* ============================================================
+   PAST EVENTS
+   ============================================================ */
+
+.past-events-section {
+  padding-bottom: 215px;
+}
+
+
+.past-events-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 11px;
+}
+
+
+/* ============================================================
+   PAST EVENT CARD
+   ============================================================ */
+
+.past-event-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 5px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+
+  transition: 0.2s ease;
+}
+
+.past-event-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ============================================================
+   PAST EVENT IMAGE
+   ============================================================ */
+
+.past-image-container {
+  position: relative;
+
+  width: 100%;
+  height: 75px;
+
+  overflow: hidden;
+
+  background: #e8eadf;
+}
+
+.past-image-container img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* COMPLETED badge */
+
+.completed-badge {
+  position: absolute;
+
+  top: 7px;
+  right: 6px;
+
+  padding: 3px 5px;
+
+  background: #eeeeee;
+
+  color: #777777;
+
+  font-size: 6px;
+
+  font-weight: 700;
+
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+   PAST EVENT TITLE
+   ============================================================ */
+
+.past-event-content {
+  padding: 9px 10px 10px;
+}
+
+.past-event-content h3 {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.25;
+
+  color: #3b4350;
+}
+
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .events-container {
+    width: calc(100% - 40px);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .events-container {
+    width: calc(100% - 30px);
+  }
+
+  .upcoming-events-grid,
+  .past-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-image-container,
+  .past-image-container {
+    height: 150px;
+  }
+
+  .past-events-section {
+    padding-bottom: 50px;
+  }
+
+}
