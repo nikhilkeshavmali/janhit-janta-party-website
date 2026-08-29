@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import VisionMission from "./pages/VisionMission";
 import Donor from "./pages/Donor";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/vision-mission" element={<VisionMission />} />
           <Route path="/donor" element={<Donor />} />
+          <Route path="/news" element={<News />} />
         </Route>
       </Routes>
     </BrowserRouter>
