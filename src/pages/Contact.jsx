@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import partyBanner from '../assets/party-banner.jpeg';
 
-// Team Lead: Nikhil
-// Assigned Module: Contact (Tejaswini)
 // Branch: feature/join-contact
 
 function Contact() {

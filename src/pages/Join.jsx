@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// Team Lead: Nikhil
-// Assigned Module: Join Us / Volunteer (Tejaswini)
 // Branch: feature/join-contact
 
 function Join() {
