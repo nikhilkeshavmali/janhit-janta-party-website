@@ -4,6 +4,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
+import Join from './pages/Join'
+import Contact from './pages/Contact'
+
 function App() {
   const [count, setCount] = useState(0)
 
