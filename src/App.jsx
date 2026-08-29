@@ -1,10 +1,10 @@
-import React from 'react';
-import Gallery from './pages/Gallery';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <Gallery />
+    <div className="App">
+     
     </div>
   );
 }
