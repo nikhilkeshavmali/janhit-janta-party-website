@@ -1,5 +1,5 @@
-jsx
 import React from "react";
+import "../assets/VisionMission.css";
 import {
   Target,
   Users,
@@ -65,274 +65,102 @@ const VisionMission = () => {
     },
   ];
 
+  const ideologicalFigures = [
+    "Chhatrapati Shivaji Maharaj",
+    "Chhatrapati Shahu Maharaj",
+    "Mahatma Jyotiba Phule",
+    "Dr. Babasaheb Ambedkar",
+    "Annabhau Sathe",
+  ];
+
   return (
-    <section className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto">
+    <section className="vm-section">
+      <div className="vm-container">
 
         {/* ================= HEADER ================= */}
-        <div className="text-center mb-14">
-          <span className="text-orange-600 font-semibold tracking-wider uppercase text-sm">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+          <span className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-xs sm:text-sm font-bold uppercase tracking-widest text-orange-700">
             Our Vision & Mission
           </span>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-3">
+          <h1 className="mt-5 vm-main-title">
             Goals, Policies & Objectives
           </h1>
 
-          <p className="mt-5 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-5 text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 leading-7 sm:leading-8 max-w-3xl mx-auto">
             Building a just, equal, transparent and people-oriented
             democracy focused on public welfare and inclusive development.
           </p>
 
-          <div className="w-24 h-1 bg-orange-500 mx-auto mt-5 rounded-full" />
+          <div className="flex justify-center items-center gap-2 mt-6">
+            <div className="h-1 w-10 sm:w-16 rounded-full bg-orange-300" />
+            <div className="h-1.5 w-16 sm:w-24 rounded-full bg-orange-600" />
+            <div className="h-1 w-10 sm:w-16 rounded-full bg-orange-300" />
+          </div>
         </div>
 
         {/* ================= VISION & MISSION ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-14 sm:mb-16">
+          
           {/* VISION */}
-          <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 sm:p-10 hover:shadow-xl transition duration-300">
-
-            <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
-              <Target className="w-7 h-7" />
+          <div className="group vm-card p-6 sm:p-8 lg:p-10">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+              <Target className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
-
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
               Our Vision
             </h2>
-
-            <p className="text-slate-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 leading-7">
               Our vision is to establish a democratic system where every
               citizen receives equal rights, equal opportunities and
               meaningful participation in the development of the nation.
-              We aim to create a society free from social injustice,
-              discrimination, corruption, political arrogance and
-              dynastic politics.
-            </p>
-
-            <p className="text-slate-600 leading-relaxed mt-4">
-              We envision an India where the voice of ordinary citizens
-              is respected, constitutional values are protected and
-              public welfare remains at the centre of governance.
             </p>
           </div>
 
           {/* MISSION */}
-          <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 sm:p-10 hover:shadow-xl transition duration-300">
-
-            <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
-              <Heart className="w-7 h-7" />
+          <div className="group vm-card p-6 sm:p-8 lg:p-10">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+              <Heart className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
-
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
               Our Mission
             </h2>
-
-            <p className="text-slate-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 leading-7">
               Our mission is to bring constitutional rights and
               opportunities to every section of society and work for
               social, economic, political and educational empowerment.
             </p>
-
-            <p className="text-slate-600 leading-relaxed mt-4">
-              We are committed to farmers, workers, youth, students,
-              women, rural communities and marginalized sections while
-              promoting transparent governance, social harmony and
-              sustainable development.
-            </p>
           </div>
 
         </div>
 
-        {/* ================= IDEOLOGICAL FOUNDATION ================= */}
-        <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 sm:p-10 mb-16">
-
-          <div className="flex items-center gap-3 mb-5">
-
-            <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center">
-              <BookOpen className="w-6 h-6" />
-            </div>
-
-            <div>
-              <span className="text-orange-600 font-semibold text-sm uppercase tracking-wider">
-                Ideological Foundation
-              </span>
-
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-                Our Ideological Inspiration
-              </h2>
-            </div>
-
-          </div>
-
-          <p className="text-slate-600 leading-relaxed">
-            The ideological foundation of the Janhit Lokshahi Party is
-            inspired by the vision of great social reformers and leaders
-            who worked towards an equal, classless and discrimination-free
-            society.
-          </p>
-
-          {/* IDEOLOGICAL FIGURES */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
-
-            <div className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
-              <h3 className="font-bold text-slate-800">
-                Chhatrapati Shivaji Maharaj
-              </h3>
-            </div>
-
-            <div className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
-              <h3 className="font-bold text-slate-800">
-                Chhatrapati Shahu Maharaj
-              </h3>
-            </div>
-
-            <div className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
-              <h3 className="font-bold text-slate-800">
-                Mahatma Jyotiba Phule
-              </h3>
-            </div>
-
-            <div className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
-              <h3 className="font-bold text-slate-800">
-                Dr. Babasaheb Ambedkar
-              </h3>
-            </div>
-
-            <div className="bg-slate-50 rounded-xl p-5 text-center border border-slate-100">
-              <h3 className="font-bold text-slate-800">
-                Annabhau Sathe
-              </h3>
-            </div>
-
-          </div>
-        </div>
-
-        {/* ================= OBJECTIVES HEADER ================= */}
-        <div className="text-center mb-10">
-
-          <span className="text-orange-600 font-semibold tracking-wider uppercase text-sm">
+        {/* ================= OBJECTIVES ================= */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <span className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-xs sm:text-sm font-bold uppercase tracking-widest text-orange-700">
             Our Objectives
           </span>
-
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mt-4 leading-tight">
             Key Goals & Policies
           </h2>
-
-          <p className="text-slate-600 mt-3 max-w-2xl mx-auto leading-relaxed">
-            Our policies focus on equality, social justice, economic
-            development, education, employment, agriculture and the
-            welfare of every section of society.
-          </p>
-
         </div>
 
-        {/* ================= OBJECTIVE CARDS ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {objectives.map((item, index) => {
             const Icon = item.icon;
-
             return (
-              <div
-                key={index}
-                className="bg-white p-7 rounded-2xl shadow-md border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300"
-              >
-
-                <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6" />
+              <div key={index} className="group vm-card p-6 sm:p-7 lg:p-8">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-
-                <h3 className="text-xl font-bold text-slate-800 mb-3">
+                <h3 className="text-lg sm:text-xl font-extrabold text-slate-800 mb-3 leading-snug">
                   {item.title}
                 </h3>
-
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 leading-7">
                   {item.text}
                 </p>
-
               </div>
             );
           })}
-
-        </div>
-
-        {/* ================= PUBLIC WELFARE ================= */}
-        <div className="mt-16 bg-gradient-to-br from-orange-500 to-amber-600 rounded-2xl p-8 sm:p-12 text-white shadow-xl">
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-            <div className="lg:col-span-8">
-
-              <span className="text-orange-100 font-semibold tracking-wider uppercase text-sm">
-                Why Support Janhit Lokshahi Party?
-              </span>
-
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mt-3">
-                A Commitment Towards Public Welfare
-              </h2>
-
-              <p className="mt-5 text-orange-50 leading-relaxed">
-                We are committed to working for farmers, fair prices
-                for agricultural produce, employment, freedom from
-                corruption, social harmony, equality and the overall
-                development of Maharashtra and India.
-              </p>
-
-              <p className="mt-4 text-orange-50 leading-relaxed">
-                Our objective is to address poverty, unemployment,
-                inflation and economic difficulties through effective
-                public-oriented programs and responsible democratic
-                governance.
-              </p>
-
-            </div>
-
-            <div className="lg:col-span-4 flex justify-center">
-
-              <div className="w-32 h-32 rounded-full bg-white/15 border border-white/30 flex items-center justify-center">
-                <Briefcase className="w-14 h-14 text-white" />
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-        {/* ================= CONSTITUTIONAL VALUES ================= */}
-        <div className="mt-16 bg-white rounded-2xl shadow-lg border border-slate-100 p-8 sm:p-10 text-center">
-
-          <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-5">
-            <ShieldCheck className="w-7 h-7" />
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-            Democracy • Equality • Justice • Public Welfare
-          </h2>
-
-          <p className="text-slate-600 max-w-3xl mx-auto mt-4 leading-relaxed">
-            Janhit Lokshahi Party is committed to constitutional values,
-            social justice, equality, secularism, fraternity, transparent
-            governance and the welfare of every citizen.
-          </p>
-
-        </div>
-
-        {/* ================= MOTTO ================= */}
-        <div className="mt-16 bg-slate-900 rounded-2xl p-8 sm:p-12 text-center text-white shadow-xl">
-
-          <p className="text-orange-400 font-semibold tracking-wider uppercase text-sm mb-3">
-            Our Motto
-          </p>
-
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold">
-            "For Public Welfare – For Public Happiness"
-          </h2>
-
-          <p className="mt-4 text-slate-300 text-lg">
-            "Committed to the Rights and Justice of the Bahujan Community"
-          </p>
-
         </div>
 
       </div>
@@ -341,4 +169,3 @@ const VisionMission = () => {
 };
 
 export default VisionMission;
-
