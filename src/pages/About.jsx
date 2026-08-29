@@ -12,7 +12,6 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
-
 const About = () => {
   const journey = [
     {
@@ -71,16 +70,13 @@ const About = () => {
   return (
     <section className="about-section">
       <div className="about-container">
-
         {/* ================= HEADER ================= */}
         <div className="about-header">
-          <h1 className="main-title">
-            Janhit Lokshahi Party
-          </h1>
+          <h1 className="main-title">Janhit Lokshahi Party</h1>
 
           <p className="header-desc">
-            A democratic movement committed to public welfare and
-            fighting for the rights and justice of the Bahujan community.
+            A democratic movement committed to public welfare and fighting for
+            the rights and justice of the Bahujan community.
           </p>
 
           <div className="header-divider">
@@ -90,11 +86,9 @@ const About = () => {
           </div>
         </div>
 
-
         {/* ================= PRESIDENT PROFILE ================= */}
         <div className="profile-card">
           <div className="profile-grid">
-
             {/* PHOTO / PROFILE SECTION */}
             <div className="profile-left">
               <div className="decor-circle-1" />
@@ -119,18 +113,13 @@ const About = () => {
                   Mr. Ashokrao Ramchandra Alhat
                 </h2>
 
-                <p className="president-title">
-                  National President & Founder
-                </p>
+                <p className="president-title">National President & Founder</p>
 
-                <p className="president-party">
-                  Janhit Lokshahi Party
-                </p>
+                <p className="president-party">Janhit Lokshahi Party</p>
 
                 {/* BASIC INFORMATION */}
                 <div className="info-box">
                   <div className="info-grid">
-                    
                     <div className="info-item">
                       <Calendar className="info-icon" />
                       <div>
@@ -152,18 +141,15 @@ const About = () => {
                       <div>
                         <p className="info-label">Native Place</p>
                         <p className="info-value">
-                          Dhandarfal Budruk, Taluka Sangamner / Rahata,
-                          District Ahilyanagar, Maharashtra
+                          Dhandarfal Budruk, Taluka Sangamner / Rahata, District
+                          Ahilyanagar, Maharashtra
                         </p>
                       </div>
                     </div>
-
                   </div>
                 </div>
-
               </div>
             </div>
-
 
             {/* BIOGRAPHY & JOURNEY SECTION */}
             <div className="profile-right">
@@ -180,30 +166,28 @@ const About = () => {
 
               <div className="bio-text">
                 <p>
-                  Mr. Ashokrao Ramchandra Alhat was born on 2 April 1966
-                  in Dhandarfal Budruk, Taluka Sangamner / Rahata,
-                  District Ahilyanagar, Maharashtra. Coming from an ordinary
-                  farming family, he completed his education through
-                  struggle and hard work.
+                  Mr. Ashokrao Ramchandra Alhat was born on 2 April 1966 in
+                  Dhandarfal Budruk, Taluka Sangamner / Rahata, District
+                  Ahilyanagar, Maharashtra. Coming from an ordinary farming
+                  family, he completed his education through struggle and hard
+                  work.
                 </p>
                 <p>
-                  He actively participated in social movements and worked
-                  for social justice, the rights of marginalized communities,
-                  and the overall development of the Bahujan society.
-                  His long social and political journey eventually led to
-                  the establishment of the Janhit Lokshahi Party.
+                  He actively participated in social movements and worked for
+                  social justice, the rights of marginalized communities, and
+                  the overall development of the Bahujan society. His long
+                  social and political journey eventually led to the
+                  establishment of the Janhit Lokshahi Party.
                 </p>
               </div>
 
               {/* SOCIAL & POLITICAL JOURNEY TIMELINE */}
               <div className="timeline-section">
-                <h3 className="timeline-heading">
-                  Social & Political Journey
-                </h3>
+                <h3 className="timeline-heading">Social & Political Journey</h3>
 
                 <div className="timeline-container">
                   <div className="timeline-line" />
-                  
+
                   <div className="timeline-items">
                     {journey.map((item, index) => (
                       <div key={index} className="timeline-item">
@@ -227,38 +211,31 @@ const About = () => {
               {/* QUOTE */}
               <div className="quote-box">
                 <div className="quote-badge">
-                  <span style={{ fontSize: "1.125rem", fontWeight: 700 }}>“</span>
+                  <span style={{ fontSize: "1.125rem", fontWeight: 700 }}>
+                    “
+                  </span>
                 </div>
                 <p className="quote-text">
-                  "Democracy is not merely about voting once every five
-                  years; our goal is to build an India where the voice of
-                  the common citizen reaches the highest legislative
-                  institutions."
+                  "Democracy is not merely about voting once every five years;
+                  our goal is to build an India where the voice of the common
+                  citizen reaches the highest legislative institutions."
                 </p>
               </div>
-
             </div>
-
           </div>
         </div>
 
-
         {/* ================= IDEOLOGY HEADER ================= */}
         <div className="principles-header">
-          <span className="badge">
-            Our Ideology
-          </span>
+          <span className="badge">Our Ideology</span>
 
-          <h2 className="principles-title">
-            Our Principles & Values
-          </h2>
+          <h2 className="principles-title">Our Principles & Values</h2>
 
           <p className="principles-desc">
-            Our journey is based on the principles of public welfare,
-            social justice, equality, and inclusive development.
+            Our journey is based on the principles of public welfare, social
+            justice, equality, and inclusive development.
           </p>
         </div>
-
 
         {/* ================= PRINCIPLE CARDS ================= */}
         <div className="principles-grid">
@@ -270,18 +247,13 @@ const About = () => {
                   <Icon size={28} />
                 </div>
 
-                <h3 className="principle-card-title">
-                  {item.title}
-                </h3>
+                <h3 className="principle-card-title">{item.title}</h3>
 
-                <p className="principle-card-desc">
-                  {item.description}
-                </p>
+                <p className="principle-card-desc">{item.description}</p>
               </div>
             );
           })}
         </div>
-
 
         {/* ================= MOTTO ================= */}
         <div className="motto-banner">
@@ -289,9 +261,7 @@ const About = () => {
           <div className="decor-circle-2" />
 
           <div style={{ position: "relative", zIndex: 10 }}>
-            <p className="motto-subtitle">
-              Our Motto
-            </p>
+            <p className="motto-subtitle">Our Motto</p>
 
             <h2 className="motto-title">
               "For Public Welfare – For Public Happiness"
@@ -306,7 +276,6 @@ const About = () => {
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );
