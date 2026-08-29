@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <header className="navbar-container">
       <div className="nav-logo">
-        <img src="/logo.jpeg" alt="Logo" className="logo-img" />
+        <Link to="/">
+          <img src="/logo.jpeg" alt="Logo" className="logo-img" />
+        </Link>
+
         <div className="logo-text">
           <span className="brand-title">JANHIT LOKSHAI</span>
           <span className="brand-subtitle">PARTY • JLP</span>
@@ -12,14 +16,14 @@ const Navbar = () => {
       </div>
 
       <nav className="nav-links">
-        <a href="#home">होम</a>
-        <a href="#about">आमच्याबद्दल</a>
-        <a href="#leaders">नेते</a>
-        <a href="#fronts">आघाड्या</a>
-        <a href="#manifesto">जाहीरनामा</a>
-        <a href="#volunteer">स्वयंसेवक व्हा</a>
-        <a href="#media">मीडिया</a>
-        <a href="#contact">संपर्क</a>
+        <Link to="/">होम</Link>
+        <Link to="/about">आमच्याबद्दल</Link>
+        <Link to="/leaders">नेते</Link>
+        <Link to="/fronts">आघाड्या</Link>
+        <Link to="/manifesto">जाहीरनामा</Link>
+        <Link to="/volunteer">स्वयंसेवक व्हा</Link>
+        <Link to="/media">मीडिया</Link>
+        <Link to="/contact">संपर्क</Link>
       </nav>
 
       <div className="nav-actions">
@@ -28,9 +32,10 @@ const Navbar = () => {
           <span>हिंदी</span>
           <span className="active-lang">मराठी</span>
         </div>
-        <a href="#donate" className="btn-donate">
+
+        <Link to="/donor" className="btn-donate">
           ♡ देणगी
-        </a>
+        </Link>
       </div>
     </header>
   );
