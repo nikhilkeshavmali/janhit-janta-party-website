@@ -1,0 +1,90 @@
+/* VisionMission.css */
+
+/* Global Reset for Safety */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Updated Section - Viewport Full Stretch */
+.vm-section {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2.5rem 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Parent constraints ब्रेक करण्यासाठी */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+@media (min-width: 640px) {
+  .vm-section { padding: 3.5rem 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .vm-section { padding: 5rem 2rem; }
+}
+
+/* Container Full Width Stretch */
+.vm-container {
+  width: 100%;
+  max-width: 100% !important; /* Fixed width (80rem) काढून टाकल */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .vm-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.vm-main-title {
+  margin-top: 1.25rem;
+  font-size: 1.875rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  background: linear-gradient(to right, #f97316, #ea580c, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 640px) { .vm-main-title { font-size: 2.25rem; } }
+@media (min-width: 768px) { .vm-main-title { font-size: 3rem; } }
+@media (min-width: 1024px) { .vm-main-title { font-size: 3.75rem; } }
+
+.vm-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.vm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .vm-card { border-radius: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .vm-card { border-radius: 1.75rem; }
+}
+
+.vm-section h2 {
+  color: #000000 !important;
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+}
