@@ -1,40 +1,24 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import MainLayout from "./layouts/MainLayout";
 
-import NationalMessage from "./components/home/NationalMessage";
-import VisionMission from "./components/home/VisionMission";
-import KeyInitiatives from "./components/home/KeyInitiatives";
-import JoinBanner from "./components/home/JoinBanner";
-
+import Home from "./pages/Home";
+import About from "./pages/About";
+import VisionMission from "./pages/VisionMission";
 import Donor from "./pages/Donor";
-
-function Home() {
-  return (
-    <>
-      <NationalMessage />
-      <VisionMission />
-      <KeyInitiatives />
-      <JoinBanner />
-    </>
-  );
-}
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-
-      <main>
-        <Routes>
+      <Routes>
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/vision-mission" element={<VisionMission />} />
           <Route path="/donor" element={<Donor />} />
-        </Routes>
-      </main>
-
-      <Footer />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

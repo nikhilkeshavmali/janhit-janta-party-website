@@ -17,12 +17,19 @@ const Navbar = () => {
 
       <nav className="nav-links">
         <Link to="/">होम</Link>
+
         <Link to="/about">आमच्याबद्दल</Link>
+
         <Link to="/leaders">नेते</Link>
+
         <Link to="/fronts">आघाड्या</Link>
+
         <Link to="/manifesto">जाहीरनामा</Link>
+
         <Link to="/volunteer">स्वयंसेवक व्हा</Link>
+
         <Link to="/media">मीडिया</Link>
+
         <Link to="/contact">संपर्क</Link>
       </nav>
 
