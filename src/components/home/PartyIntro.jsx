@@ -25,14 +25,14 @@ const PartyIntro = () => {
       <div style={styles.container}>
         {/* Sub-heading & Badge */}
         <span style={styles.subTitle}>आमची ओळख आणि ध्येय</span>
-        <h2 style={styles.heading}>जनहित जनता पार्टीमध्ये आपले स्वागत आहे</h2>
+        <h2 style={styles.heading}>जनहित लोकशाही पार्टीमध्ये आपले स्वागत आहे</h2>
         
         {/* Divider Line */}
         <div style={styles.divider}></div>
 
         {/* Main Intro Paragraph */}
         <p style={styles.description}>
-          जनहित जनता पार्टी ही केवळ एक राजकीय संघटना नसून जनतेच्या हक्कासाठी लढणारा एक विचार आहे. 
+          जनहित लोकशाही पार्टी ही केवळ एक राजकीय संघटना नसून जनतेच्या हक्कासाठी लढणारा एक विचार आहे. 
           सामाजिक कल्याण, शिक्षण, आरोग्य आणि शाश्वत विकासाच्या माध्यमातून देशातील प्रत्येक नागरिकाचे 
           जीवनमान उंचावणे हेच आमचे अंतिम ध्येय आहे.
         </p>
