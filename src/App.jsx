@@ -12,6 +12,9 @@ import Join from "./pages/Join";
 import Contact from "./pages/Contact";
 import Initiatives from "./pages/Initiatives";
 
+import Join from './pages/Join'
+import Contact from './pages/Contact'
+
 function App() {
   return (
     <BrowserRouter>
