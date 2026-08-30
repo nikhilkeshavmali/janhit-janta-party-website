@@ -28,7 +28,7 @@ const Navbar = () => {
 
         <Link to="/join">स्वयंसेवक व्हा</Link>
 
-        <Link to="/media">मीडिया</Link>
+        <Link to="/news">मीडिया</Link>
 
         <Link to="/contact">संपर्क</Link>
       </nav>
