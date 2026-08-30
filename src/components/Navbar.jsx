@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link to="/join">स्वयंसेवक व्हा</Link>
 
         <Link to="/news">मीडिया</Link>
-
+        <Link to="/events">कार्यक्रम</Link>
         <Link to="/contact">संपर्क</Link>
       </nav>
 
