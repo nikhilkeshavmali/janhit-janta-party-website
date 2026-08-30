@@ -26,7 +26,7 @@ const Navbar = () => {
 
         <Link to="/manifesto">जाहीरनामा</Link>
 
-        <Link to="/volunteer">स्वयंसेवक व्हा</Link>
+        <Link to="/join">स्वयंसेवक व्हा</Link>
 
         <Link to="/media">मीडिया</Link>
 

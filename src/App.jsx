@@ -8,6 +8,8 @@ import VisionMission from "./pages/VisionMission";
 import Donor from "./pages/Donor";
 import News from "./pages/News";
 import Events from "./pages/Events";
+import Join from "./pages/Join";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/donor" element={<Donor />} />
           <Route path="/news" element={<News />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/join" element={<Join />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
