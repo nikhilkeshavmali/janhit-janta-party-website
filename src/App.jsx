@@ -10,6 +10,7 @@ import News from "./pages/News";
 import Events from "./pages/Events";
 import Join from "./pages/Join";
 import Contact from "./pages/Contact";
+import Initiatives from "./pages/Initiatives";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/vision-mission" element={<VisionMission />} />
           <Route path="/donor" element={<Donor />} />
           <Route path="/news" element={<News />} />
+          <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/events" element={<Events />} />
           <Route path="/join" element={<Join />} />
           <Route path="/contact" element={<Contact />} />

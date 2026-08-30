@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header className="navbar-container">
+      {/* Logo */}
       <div className="nav-logo">
         <Link to="/">
-          <img src="/logo.jpeg" alt="Logo" className="logo-img" />
+          <img
+            src="/logo.jpeg"
+            alt="Janhit Lokshahi Party Logo"
+            className="logo-img"
+          />
         </Link>
 
         <div className="logo-text">
@@ -15,24 +20,21 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Navigation Links */}
       <nav className="nav-links">
         <Link to="/">होम</Link>
-
         <Link to="/about">आमच्याबद्दल</Link>
-
         <Link to="/leaders">नेते</Link>
-
         <Link to="/fronts">आघाड्या</Link>
-
         <Link to="/manifesto">जाहीरनामा</Link>
-
+        <Link to="/initiatives">पुढाकार</Link>
         <Link to="/join">स्वयंसेवक व्हा</Link>
-
         <Link to="/news">मीडिया</Link>
         <Link to="/events">कार्यक्रम</Link>
         <Link to="/contact">संपर्क</Link>
       </nav>
 
+      {/* Actions */}
       <div className="nav-actions">
         <div className="lang-switcher">
           <span>EN</span>
