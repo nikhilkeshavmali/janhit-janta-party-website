@@ -35,7 +35,7 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div style={styles.content}>
-        <span style={styles.badge}>जनहित जनता पार्टी</span>
+        <span style={styles.badge}>जनहित लोकशाही पार्टी</span>
         <h1 style={styles.title}>
           जनतेची सेवा, <span style={{ color: '#FF9933' }}>राष्ट्राचे सबलीकरण!</span>
         </h1>
