@@ -1,7 +1,6 @@
-// =========================================================
+
 // NEWS CARD COMPONENT
-// Latest News section मधील प्रत्येक card.
-// =========================================================
+
 
 function NewsCard({ news, onReadMore }) {
   return (

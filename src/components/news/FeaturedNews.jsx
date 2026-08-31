@@ -1,7 +1,3 @@
-// =========================================================
-// FEATURED NEWS COMPONENT
-// Main featured news आणि side featured news साठी.
-// =========================================================
 
 function FeaturedNews({ news, onReadMore, variant = "large" }) {
   return (
