@@ -1,59 +1,120 @@
-import React from "react";
+import React, { useState } from "react";
 
+import ambadMeeting from "../assets/event-images/ambad_jalna_meeting (2).png";
+import janhitActivity from "../assets/event-images/janhit_lokshahi_activity_navi_mumbai.png";
+import marathaDistrictMeet from "../assets/event-images/maratha_district_meet_shrirampur.png";
+import mulundDiscussion from "../assets/event-images/mulund_political_discussion.jpg";
+import mumbaiPressConference from "../assets/event-images/mumbai_marathi_press_conference.png";
+import appointmentCeremony from "../assets/event-images/navi_mumbai_appointment_ceremony.jpg";
+import statewideCampaign from "../assets/event-images/statewide_campaign_pune.png";
+import thanePoliticalDiscussion from "../assets/event-images/thane_political_discussion_obc_movement.jpg";
+import womensMeet from "../assets/event-images/womens_meet_nashik.png";
+import workerDay from "../assets/event-images/worker_day_katora_daud_mumbai.jpg";
 function Events() {
-  const upcomingEvents = [
-    {
-      title: "Youth Awareness Program",
-      date: "15 September 2026",
-      location: "Nashik, Maharashtra",
-      icon: "🇮🇳",
-      image:
-        "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8",
-    },
-    {
-      title: "Farmers' Meetup",
-      date: "22 September 2026",
-      location: "Dhule, Maharashtra",
-      icon: "🌾",
-      image:
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-    },
-    {
-      title: "Digital India Seminar",
-      date: "5 October 2026",
-      location: "Mumbai, Maharashtra",
-      icon: "💻",
-      image:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
-    },
-  ];
+  const [showAllPastEvents, setShowAllPastEvents] = useState(false);
 
   const pastEvents = [
-    {
-      title: "Clean City Initiative",
-      date: "20 July 2026",
-      location: "Nashik, Maharashtra",
-      icon: "🌱",
-      image:
-        "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b",
-    },
-    {
-      title: "Women Empowerment Summit",
-      date: "10 June 2026",
-      location: "Pune, Maharashtra",
-      icon: "👩‍💼",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
-    },
-    {
-      title: "Rural Education Drive",
-      date: "15 May 2026",
-      location: "Dhule, Maharashtra",
-      icon: "📚",
-      image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7",
-    },
-  ];
+  {
+    title: "Workers' Day Awareness March",
+    description:
+      "A programme was organized from August Kranti Maidan to Azad Maidan to raise the issues of workers and unemployed people.",
+    date: "16 May 2004",
+    location: "Mumbai, Maharashtra",
+    icon: "🇮🇳",
+    image: workerDay,
+  },
+
+  {
+    title: "District-Wide Maratha Community Gathering",
+    description:
+      "A gathering was organized to address and discuss various issues concerning the Maratha community.",
+    date: "9 July 2006",
+    location: "Shrirampur, Ahmednagar, Maharashtra",
+    icon: "🤝",
+    image: marathaDistrictMeet,
+  },
+
+  {
+    title: "Public Awareness and Activist Programme",
+    description:
+      "A public awareness and activist-oriented programme was organized through the Bharatiya Kranti Sena and associated organizations.",
+    date: "14 June 2008",
+    location: "Navi Mumbai, Maharashtra",
+    icon: "📢",
+    image: janhitActivity,
+  },
+
+  {
+    title: "District Women's Gathering",
+    description:
+      "A women's gathering was organized by the Janhit Lokshahi Party, attended by the party president and other office bearers.",
+    date: "9 May 2018",
+    location: "Nashik, Maharashtra",
+    icon: "👩",
+    image: womensMeet,
+  },
+
+  {
+    title: "Launch of Statewide Campaign",
+    description:
+      "The statewide campaign organized by the Janhit Lokshahi Party was officially launched from Pune.",
+    date: "7 July 2019",
+    location: "Pune, Maharashtra",
+    icon: "🇮🇳",
+    image: statewideCampaign,
+  },
+
+  {
+    title: "Appointment Ceremony of New Office Bearers",
+    description:
+      "A ceremony was organized to appoint newly selected office bearers, attended by the party president and other dignitaries.",
+    date: "2019",
+    location: "Navi Mumbai, Maharashtra",
+    icon: "🤝",
+    image: appointmentCeremony,
+  },
+
+  {
+    title: "Marathwada Divisional-Level Meeting",
+    description:
+      "A divisional-level meeting was organized at the Government Rest House in Ambad Taluka to discuss important organizational and regional matters.",
+    date: "22 June 2022",
+    location: "Ambad, Jalna, Maharashtra",
+    icon: "📋",
+    image: ambadMeeting,
+  },
+
+  {
+    title: "Political Discussion Session",
+    description:
+      "A joint discussion involving several political parties and organizations was held to explore alternatives on the political landscape of Maharashtra.",
+    date: "7 June 2022",
+    location: "Mulund, Mumbai, Maharashtra",
+    icon: "🗣️",
+    image: mulundDiscussion,
+  },
+
+  {
+    title: "Grand Press Conference",
+    description:
+      "A major press conference was organized with the participation of the Janhit Lokshahi Party and around 20 other political parties and organizations.",
+    date: "8 June 2022, 4:00 PM",
+    location: "Mumbai Marathi Patrakar Sangh, Mumbai",
+    icon: "🎤",
+    image: mumbaiPressConference,
+  },
+
+  {
+    title: "District Political Discussion Seminar",
+    description:
+      "A discussion seminar was organized in Thane district to discuss important political issues and developments.",
+    date: "December 2022",
+    location: "Thane, Maharashtra",
+    icon: "📢",
+    image: thanePoliticalDiscussion,
+  },
+];
+
 
   return (
     <div
@@ -65,10 +126,7 @@ function Events() {
         color: "#172033",
       }}
     >
-
-      {/* =====================================================
-          HERO SECTION
-      ===================================================== */}
+      {/* HERO SECTION */}
 
       <div
         style={{
@@ -80,7 +138,6 @@ function Events() {
             "linear-gradient(135deg, #ff9933 0%, #ffffff 48%, #138808 100%)",
         }}
       >
-
         {/* Soft overlay */}
 
         <div
@@ -112,25 +169,24 @@ function Events() {
             zIndex: "2",
           }}
         >
-
           <div
             style={{
               fontSize: "58px",
               marginBottom: "12px",
             }}
           >
-            🇮🇳
+            
           </div>
 
           <h1
             style={{
-              fontSize: "50px",
+              fontSize: "75px",
               margin: "0",
               fontWeight: "800",
               color: "#172033",
             }}
           >
-            Events & Initiatives
+            EVENTS
           </h1>
 
           {/* Tricolour line */}
@@ -148,34 +204,30 @@ function Events() {
 
           <p
             style={{
-              fontSize: "19px",
+              fontSize: "25px",
               maxWidth: "700px",
               margin: "0 auto",
               color: "#4b5563",
               lineHeight: "1.7",
             }}
           >
-            Stay Connected With Our Activities, Initiatives and Events
+            Explore Our Events, Initiatives and Journey
           </p>
 
           <p
             style={{
               marginTop: "20px",
-              fontSize: "16px",
+              fontSize: "30px",
               fontWeight: "700",
               color: "#000080",
             }}
           >
             सेवा • एकता • विकास
           </p>
-
         </div>
       </div>
 
-
-      {/* =====================================================
-          MAIN CONTENT
-      ===================================================== */}
+      {/* MAIN CONTENT */}
 
       <div
         style={{
@@ -184,281 +236,16 @@ function Events() {
           padding: "60px 25px",
         }}
       >
-
-        {/* =====================================================
-            UPCOMING EVENTS
-        ===================================================== */}
-
-        <section style={{ marginBottom: "75px" }}>
-
-          <div style={{ marginBottom: "35px" }}>
-
-            <p
-              style={{
-                margin: "0 0 8px",
-                color: "#ff7a00",
-                fontWeight: "700",
-                fontSize: "14px",
-                letterSpacing: "1.5px",
-                textTransform: "uppercase",
-              }}
-            >
-              Participate With Us
-            </p>
-
-            <h2
-              style={{
-                margin: "0",
-                fontSize: "34px",
-                fontWeight: "800",
-                color: "#172033",
-              }}
-            >
-              Upcoming Events
-            </h2>
-
-            <div
-              style={{
-                marginTop: "12px",
-                width: "75px",
-                height: "5px",
-                borderRadius: "10px",
-                background:
-                  "linear-gradient(90deg, #ff9933 50%, #138808 50%)",
-              }}
-            ></div>
-
-          </div>
-
-
-          {/* EVENT CARDS */}
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: "30px",
-            }}
-          >
-
-            {upcomingEvents.map((event, index) => (
-
-              <div
-                key={index}
-                style={{
-                  backgroundColor: "#ffffff",
-                  borderRadius: "18px",
-                  overflow: "hidden",
-                  border: "1px solid #e7e7e7",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-                }}
-              >
-
-                {/* =================================================
-                    IMAGE WITH INDIAN FLAG BORDER
-                ================================================= */}
-
-                <div
-                  style={{
-                    padding: "6px",
-                    background:
-                      "linear-gradient(90deg, #ff9933 0%, #ffffff 50%, #138808 100%)",
-                  }}
-                >
-
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    style={{
-                      width: "100%",
-                      height: "210px",
-                      objectFit: "cover",
-                      display: "block",
-                      borderRadius: "12px",
-                      border: "2px solid white",
-                    }}
-                  />
-
-                </div>
-
-
-                {/* Card Content */}
-
-                <div style={{ padding: "25px" }}>
-
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      marginBottom: "15px",
-                    }}
-                  >
-
-                    <span
-                      style={{
-                        padding: "7px 13px",
-                        borderRadius: "20px",
-                        backgroundColor: "#eaf7ee",
-                        color: "#138808",
-                        fontSize: "11px",
-                        fontWeight: "800",
-                      }}
-                    >
-                      UPCOMING
-                    </span>
-
-                    <span
-                      style={{
-                        fontSize: "27px",
-                      }}
-                    >
-                      {event.icon}
-                    </span>
-
-                  </div>
-
-
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      margin: "0 0 18px",
-                      color: "#172033",
-                      lineHeight: "1.3",
-                    }}
-                  >
-                    {event.title}
-                  </h3>
-
-
-                  {/* Date */}
-
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      marginBottom: "10px",
-                      color: "#555",
-                      fontSize: "14px",
-                    }}
-                  >
-                    <span>📅</span>
-                    <span>{event.date}</span>
-                  </div>
-
-
-                  {/* Location */}
-
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      marginBottom: "22px",
-                      color: "#555",
-                      fontSize: "14px",
-                    }}
-                  >
-                    <span>📍</span>
-                    <span>{event.location}</span>
-                  </div>
-
-
-                  {/* Button */}
-
-                  <button
-                    style={{
-                      width: "100%",
-                      padding: "13px",
-                      border: "none",
-                      borderRadius: "9px",
-                      background:
-                        "linear-gradient(90deg, #ff9933, #ff7a00)",
-                      color: "white",
-                      fontWeight: "700",
-                      fontSize: "15px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Join Event →
-                  </button>
-
-                </div>
-              </div>
-
-            ))}
-
-          </div>
-
-        </section>
-
-
-        {/* =====================================================
-            ASHOKA CHAKRA DIVIDER
-        ===================================================== */}
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "18px",
-            margin: "20px 0 70px",
-          }}
-        >
-
-          <div
-            style={{
-              flex: "1",
-              height: "2px",
-              background:
-                "linear-gradient(90deg, transparent, #ff9933)",
-            }}
-          ></div>
-
-          <div
-            style={{
-              width: "45px",
-              height: "45px",
-              border: "3px solid #000080",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#000080",
-              fontSize: "25px",
-            }}
-          >
-            ☸
-          </div>
-
-          <div
-            style={{
-              flex: "1",
-              height: "2px",
-              background:
-                "linear-gradient(90deg, #138808, transparent)",
-            }}
-          ></div>
-
-        </div>
-
-
-        {/* =====================================================
-            PAST EVENTS
-        ===================================================== */}
+        {/* PAST EVENTS */}
 
         <section>
-
           <div style={{ marginBottom: "35px" }}>
-
             <p
               style={{
                 margin: "0 0 8px",
                 color: "#138808",
                 fontWeight: "700",
-                fontSize: "14px",
+                fontSize: "50px",
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
               }}
@@ -474,7 +261,7 @@ function Events() {
                 color: "#172033",
               }}
             >
-              Past Events
+
             </h2>
 
             <div
@@ -487,9 +274,7 @@ function Events() {
                   "linear-gradient(90deg, #138808 50%, #ff9933 50%)",
               }}
             ></div>
-
           </div>
-
 
           {/* PAST EVENT CARDS */}
 
@@ -501,9 +286,10 @@ function Events() {
               gap: "30px",
             }}
           >
-
-            {pastEvents.map((event, index) => (
-
+            {(showAllPastEvents
+              ? pastEvents
+              : pastEvents.slice(0, 4)
+            ).map((event, index) => (
               <div
                 key={index}
                 style={{
@@ -514,7 +300,6 @@ function Events() {
                   boxShadow: "0 8px 25px rgba(0,0,0,0.07)",
                 }}
               >
-
                 {/* Indian Tricolour Image Frame */}
 
                 <div
@@ -524,7 +309,6 @@ function Events() {
                       "linear-gradient(90deg, #ff9933 0%, #ffffff 50%, #138808 100%)",
                   }}
                 >
-
                   <img
                     src={event.image}
                     alt={event.title}
@@ -537,12 +321,11 @@ function Events() {
                       border: "2px solid white",
                     }}
                   />
-
                 </div>
 
+                {/* Card Content */}
 
                 <div style={{ padding: "25px" }}>
-
                   {/* Completed + Icon */}
 
                   <div
@@ -553,7 +336,6 @@ function Events() {
                       marginBottom: "15px",
                     }}
                   >
-
                     <span
                       style={{
                         padding: "7px 13px",
@@ -570,9 +352,7 @@ function Events() {
                     <span style={{ fontSize: "27px" }}>
                       {event.icon}
                     </span>
-
                   </div>
-
 
                   {/* TITLE */}
 
@@ -586,7 +366,6 @@ function Events() {
                   >
                     {event.title}
                   </h3>
-
 
                   {/* DATE */}
 
@@ -604,34 +383,42 @@ function Events() {
                     <span>{event.date}</span>
                   </div>
 
-
                   {/* LOCATION */}
 
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      color: "#555",
-                      fontSize: "14px",
-                    }}
-                  >
-                    <span>📍</span>
-                    <span>{event.location}</span>
-                  </div>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    color: "#555",
+    fontSize: "14px",
+  }}
+>
+  <span>📍</span>
+  <span>{event.location}</span>
+</div>
 
-                </div>
+{/* DESCRIPTION */}
 
-              </div>
+<div
+  style={{
+    marginTop: "12px",
+    color: "#555",
+    fontSize: "14px",
+    lineHeight: "1.6",
+  }}
+>
+  <span style={{ fontWeight: "600", color: "#172033" }}>
+    Description:{" "}
+  </span>
+  <span>{event.description}</span>
+</div>
 
-            ))}
-
-          </div>
-
-
-          {/* =================================================
-              VIEW MORE EVENTS
-          ================================================= */}
+</div>
+</div>
+))}
+</div>
+          {/* VIEW MORE EVENTS */}
 
           <div
             style={{
@@ -639,8 +426,10 @@ function Events() {
               marginTop: "45px",
             }}
           >
-
             <button
+              onClick={() =>
+                setShowAllPastEvents(!showAllPastEvents)
+              }
               style={{
                 padding: "14px 32px",
                 borderRadius: "30px",
@@ -653,75 +442,128 @@ function Events() {
                 boxShadow: "0 5px 15px rgba(0,0,0,0.06)",
               }}
             >
-              View More Events →
+              {showAllPastEvents
+                ? "Show Less ↑"
+                : "View More Events →"}
             </button>
-
           </div>
-
         </section>
 
+        
+{/* BOTTOM SLOGAN SECTION */}
 
-        {/* =====================================================
-            BOTTOM SECTION
-        ===================================================== */}
+<div
+  style={{
+    position: "relative",
+    marginTop: "80px",
+    padding: "55px 25px",
+    textAlign: "center",
+    borderRadius: "24px",
+    overflow: "hidden",
+    background:
+      "linear-gradient(135deg, #fff1df 0%, #ffffff 48%, #e8f7eb 100%)",
+    border: "1px solid #e2e2e2",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+  }}
+>
+  {/* Decorative Ashoka Chakra */}
 
-        <div
-          style={{
-            marginTop: "80px",
-            padding: "45px 25px",
-            textAlign: "center",
-            borderRadius: "20px",
-            background:
-              "linear-gradient(135deg, #fff4e8, #ffffff, #edf8f0)",
-            border: "1px solid #e6e6e6",
-            boxShadow: "0 8px 25px rgba(0,0,0,0.05)",
-          }}
-        >
+  <div
+    style={{
+      position: "absolute",
+      width: "220px",
+      height: "220px",
+      border: "7px solid rgba(0,0,128,0.06)",
+      borderRadius: "50%",
+      left: "50%",
+      top: "50%",
+      transform: "translate(-50%, -50%)",
+      pointerEvents: "none",
+    }}
+  ></div>
 
-          <div
-            style={{
-              fontSize: "42px",
-              marginBottom: "12px",
-            }}
-          >
-            🇮🇳
-          </div>
+  {/* Tricolour top line */}
 
-          <h2
-            style={{
-              margin: "0 0 12px",
-              fontSize: "27px",
-              color: "#172033",
-            }}
-          >
-            Together for a Better Tomorrow
-          </h2>
+  <div
+    style={{
+      position: "absolute",
+      top: "0",
+      left: "0",
+      width: "100%",
+      height: "7px",
+      background:
+        "linear-gradient(90deg, #ff9933 0%, #ffffff 50%, #138808 100%)",
+    }}
+  ></div>
 
-          <p
-            style={{
-              margin: "0 auto",
-              maxWidth: "600px",
-              color: "#666",
-              fontSize: "15px",
-              lineHeight: "1.7",
-            }}
-          >
-            Participate, connect and contribute to meaningful community
-            initiatives for a stronger and better India.
-          </p>
+  {/* Content */}
 
-          <div
-            style={{
-              marginTop: "22px",
-              fontSize: "14px",
-              fontWeight: "700",
-              color: "#000080",
-            }}
-          >
-            🇮🇳 सेवा &nbsp; • &nbsp; एकता &nbsp; • &nbsp; विकास 🇮🇳
-          </div>
+  <div
+    style={{
+      position: "relative",
+      zIndex: "2",
+    }}
+  >
+    <div
+      style={{
+        fontSize: "48px",
+        marginBottom: "15px",
+      }}
+    >
+      
+    </div>
 
-        </div>
+    <h2
+      style={{
+        margin: "0",
+        fontSize: "32px",
+        fontWeight: "800",
+        color: "#172033",
+        lineHeight: "1.3",
+      }}
+    >
+      Together We Make a Better Tomorrow
+    </h2>
+
+    {/* Tricolour underline */}
+
+    <div
+      style={{
+        width: "100px",
+        height: "5px",
+        margin: "18px auto",
+        borderRadius: "10px",
+        background:
+          "linear-gradient(90deg, #ff9933 33%, #000080 33%, #000080 66%, #138808 66%)",
+      }}
+    ></div>
+
+    <p
+      style={{
+        margin: "0 auto",
+        maxWidth: "650px",
+        color: "#555",
+        fontSize: "20px",
+        lineHeight: "1.8",
+      }}
+    >
+      Together, we can build a stronger community through unity,
+      service and meaningful initiatives for a better India.
+    </p>
+
+    <div
+      style={{
+        marginTop: "25px",
+        fontSize: "25px",
+        fontWeight: "800",
+        color: "#000080",
+        letterSpacing: "1px",
+      }}
+    >
+       &nbsp; सेवा &nbsp; • &nbsp; एकता &nbsp; • &nbsp; विकास &nbsp; 
+    </div>
+  </div>
+</div>
 
       </div>
     </div>
@@ -729,3 +571,5 @@ function Events() {
 }
 
 export default Events;
+
+
