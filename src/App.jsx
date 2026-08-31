@@ -11,9 +11,7 @@ import Events from "./pages/Events";
 import Join from "./pages/Join";
 import Contact from "./pages/Contact";
 import Initiatives from "./pages/Initiatives";
-
-import Join from './pages/Join'
-import Contact from './pages/Contact'
+import Leadership from "./pages/Leadership";
 
 function App() {
   return (
@@ -22,6 +20,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/leadership" element={<Leadership />} />
           <Route path="/vision-mission" element={<VisionMission />} />
           <Route path="/donor" element={<Donor />} />
           <Route path="/news" element={<News />} />
