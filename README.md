@@ -269,7 +269,23 @@ git push origin main
 
 > Before doing this, check whether the selected file depends on other files from the teammate's branch.
 
-## 🧪 Testing
+## ⚙️ Environment Requirements
+
+Make sure the following tools are installed:
+
+- Node.js
+- npm (Node Package Manager)
+- Git
+- Visual Studio Code or any code editor
+
+Check installed versions:
+
+```bash
+node -v
+npm -v
+git --version
+
+##🧪 Testing
 
 Before pushing or creating a Pull Request:
 
